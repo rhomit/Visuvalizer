@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visuvalizer</title>
+    <meta name="description" content="Interactive visualizer for algorithms, design patterns, and software architectures." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">V</div>
+        <div>
+          <h1>Visuvalizer</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-button active" data-category="algorithms">Algorithms</button>
+        <button class="nav-button" data-category="patterns">Patterns</button>
+        <button class="nav-button" data-category="architectures">Architectures</button>
+      </nav>
+
+      <div class="selector-wrap">
+        <label for="conceptSelect">Choose concept</label>
+        <select id="conceptSelect" aria-label="Select a concept to visualize"></select>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="info-panel">
+        <div class="panel-card">
+          <p class="eyebrow">Concept overview</p>
+          <h2 id="conceptTitle">Bubble Sort</h2>
+          <p id="conceptDescription">
+            Compare adjacent elements and swap them when they are out of order.
+          </p>
+        </div>
+
+        <div class="panel-card panel-list">
+          <p class="eyebrow">Topics</p>
+          <ul id="topicList"></ul>
+        </div>
+      </aside>
+
+      <section class="visual-panel">
+        <div id="visualContainer" class="visual-container"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
